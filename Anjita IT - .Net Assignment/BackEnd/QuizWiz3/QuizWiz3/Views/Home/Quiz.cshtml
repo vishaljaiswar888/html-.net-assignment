@@ -1,0 +1,32 @@
+﻿@model QuizWiz3.Models.Quiz
+
+@{
+    ViewData["Title"] = "Quiz Question";
+}
+
+<h2 class="text-center">Quiz Question</h2>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div>
+                <h4>Question:</h4>
+                <p>@Model.question</p>
+            </div>
+
+            <form asp-controller="Home" asp-action="SubmitAnswer" method="post">
+                <input type="hidden" name="quiz_Id" value="@Model.quiz_Id" />
+                <div class="form-group">
+                    <label>Select your answer:</label>
+                    <div>
+                        <input type="radio" name="user_Answer" value="@Model.option1" required /> @Model.option1<br />
+                        <input type="radio" name="user_Answer" value="@Model.option2" required /> @Model.option2<br />
+                        <input type="radio" name="user_Answer" value="@Model.option3" required /> @Model.option3<br />
+                        <input type="radio" name="user_Answer" value="@Model.option4" required /> @Model.option4
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Next</button>
+            </form>
+        </div>
+    </div>
+</div>

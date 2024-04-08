@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="text-center">
+        <h1 class="display-4">Welcome to QuizWiz</h1>
+        <p class="lead mt-5">Please enter your email to begin the test.</p>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form method="post" action="/Home/BeginTest">
+                        <div class="form-group d-flex justify-content-center">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email" name="user_Email" required style="width: 70%;">
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Begin Test</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

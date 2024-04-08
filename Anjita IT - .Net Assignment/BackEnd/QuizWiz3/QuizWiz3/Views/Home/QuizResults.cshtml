@@ -1,0 +1,20 @@
+﻿@model List<QuizWiz3.Models.Submit>
+
+@{
+    ViewData["Title"] = "Quiz Results";
+}
+
+<h2>Quiz Results</h2>
+
+@foreach (var submission in Model)
+{
+    <div>
+        <h4>Question:</h4>
+        <p>@submission.Quiz.question</p>
+        <h5>Your Answer:</h5>
+        <p>@submission.user_Answer</p>
+        <h5>Correct Answer:</h5>
+        <p>@submission.Quiz.correct_Answer</p>
+        <br /><br />
+    </div>
+}
